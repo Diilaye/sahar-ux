@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import emailjs from 'emailjs-com';
 import SectionTitle from '../ui/SectionTitle';
 import Button from '../ui/Button';
 import { 
@@ -91,29 +92,45 @@ const Contact = () => {
     if (formRef.current) {
       formRef.current.classList.add('form-submitting');
       
+      // Préparation des paramètres pour EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        service_requested: formData.service,
+        message: formData.message,
+        to_email: 'contact@saharux.com'
+      };
+      
+      // Configuration EmailJS - remplacer par vos propres identifiants
+      const serviceID = 'service_s91rmil'; // Créez un service dans votre compte EmailJS
+      const templateID = 'template_rj0vbgl'; // Créez un template dans votre compte EmailJS
+      const userID = 'geKyVtxkj4lAeabkm'; // Votre clé publique EmailJS
+      
       setTimeout(() => {
-        // Ici, nous simulons une soumission de formulaire réussie
-        try {
-          // Logique de soumission du formulaire irait ici
-          console.log('Form submitted:', formData);
-          setFormSubmitted(true);
-          setFormError(false);
-          
-          // Reset form
-          setFormData({
-            name: '',
-            email: '',
-            service: '',
-            message: '',
+        // Envoi de l'email via EmailJS
+        emailjs.send(serviceID, templateID, templateParams, userID)
+          .then((response) => {
+            console.log('Email sent successfully:', response);
+            setFormSubmitted(true);
+            setFormError(false);
+            
+            // Reset form
+            setFormData({
+              name: '',
+              email: '',
+              service: '',
+              message: '',
+            });
+          })
+          .catch((error) => {
+            console.error('Email sending failed:', error);
+            setFormError(true);
+          })
+          .finally(() => {
+            if (formRef.current) {
+              formRef.current.classList.remove('form-submitting');
+            }
           });
-        } catch (error) {
-          console.error('Form submission error:', error);
-          setFormError(true);
-        }
-        
-        if (formRef.current) {
-          formRef.current.classList.remove('form-submitting');
-        }
       }, 800);
     }
   };
@@ -346,11 +363,35 @@ const Contact = () => {
                       <CheckCircle size={40} className="text-green-500" />
                     </div>
                     <h4 className="text-xl font-bold text-white mb-2">Message envoyé avec succès!</h4>
-                    <p className="text-white/70 mb-6">Nous vous répondrons dans les plus brefs délais.</p>
+                    <p className="text-white/70 mb-6">Votre message a été envoyé à contact@saharux.com. Nous vous répondrons dans les plus brefs délais.</p>
                     <Button 
                       variant="primary" 
                       onClick={() => setFormSubmitted(false)}
                       className="bg-gradient-to-r from-teal-600 to-orange-600 hover:from-teal-700 hover:to-orange-700"
+                    >
+                      Fermer
+                    </Button>
+                  </div>
+                </div>
+              )}
+              
+              {/* Error message */}
+              {formError && (
+                <div className="absolute inset-0 flex items-center justify-center bg-midnight-dark/95 backdrop-blur-md z-20 animate-fade-in">
+                  <div className="text-center p-8">
+                    <div className="inline-block p-3 rounded-full bg-red-500/10 mb-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-500">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="15" y1="9" x2="9" y2="15"></line>
+                        <line x1="9" y1="9" x2="15" y2="15"></line>
+                      </svg>
+                    </div>
+                    <h4 className="text-xl font-bold text-white mb-2">Erreur d'envoi</h4>
+                    <p className="text-white/70 mb-6">Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer ou nous contacter directement à contact@saharux.com.</p>
+                    <Button 
+                      variant="primary" 
+                      onClick={() => setFormError(false)}
+                      className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800"
                     >
                       Fermer
                     </Button>

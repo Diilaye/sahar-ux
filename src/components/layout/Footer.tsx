@@ -40,9 +40,9 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-orange-400 font-semibold text-xl mb-6">Contact</h3>
             <ul className="space-y-4">
-              <FooterContact icon={<Mail size={18} />} text="contact@saharux.com" />
               <FooterContact icon={<Phone size={18} />} text="+221 77 248 88 07" />
-              <FooterContact icon={<MapPin size={18} />} text={`Cambérène, Dakar, Sénégal`} />
+              <FooterContact icon={<Phone size={18} />} text="+221 77 584 18 16" />
+              <FooterContact icon={<Phone size={18} />} text="+221 78 014 66 30" />
             </ul>
           </div>
         </div>

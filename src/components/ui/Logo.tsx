@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Logo: React.FC = () => {
   return (
-    <a href="#" className="flex flex-col items-start group">
+    <Link to="/" className="flex flex-col items-start group">
       {/* Main logo text */}
       <div className="flex items-center">
         {/* S with pixel pattern */}
@@ -23,7 +24,7 @@ const Logo: React.FC = () => {
       <span className="text-[#FF7F50] text-sm tracking-wider mt-1">
         Les Magiciens du Web
       </span>
-    </a>
+    </Link>
   );
 };
 
