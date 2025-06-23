@@ -27,7 +27,7 @@ const Process = () => {
     {
       id: 1,
       icon: <Flasks className="transition-transform duration-500 group-hover:scale-110" size={32} />,
-      secondaryIcon: <Beaker size={20} className="text-purple-300" />,
+      secondaryIcon: <Beaker size={20} className="text-teal-300" />,
       title: 'Concoctage d\'idées',
       description: 'Nous commençons par une phase de découverte approfondie pour comprendre vos objectifs, votre marché, et vos utilisateurs. Cette étape nous permet de distiller l\'essence de votre projet en une vision stratégique claire.',
       features: [
@@ -36,14 +36,14 @@ const Process = () => {
         'Définition des personas',
         'Élaboration de la stratégie digitale',
       ],
-      color: 'purple',
-      gradient: 'from-purple-600 to-purple-400',
-      particleColor: 'bg-purple-400'
+      color: 'teal',
+      gradient: 'from-teal-600 to-teal-400',
+      particleColor: 'bg-teal-400'
     },
     {
       id: 2,
       icon: <Wand2 className="transition-transform duration-500 group-hover:rotate-12" size={32} />,
-      secondaryIcon: <Brain size={20} className="text-blue-300" />,
+      secondaryIcon: <Brain size={20} className="text-teal-300" />,
       title: 'Transformation magique',
       description: 'Nous transformons la stratégie en expérience tangible, du wireframing à la conception visuelle. Chaque élément est pensé pour créer une expérience mémorable et efficace pour vos utilisateurs.',
       features: [
@@ -52,14 +52,14 @@ const Process = () => {
         'Développement front-end et back-end',
         'Tests et optimisations itératives',
       ],
-      color: 'blue',
-      gradient: 'from-blue-600 to-blue-400',
-      particleColor: 'bg-blue-400'
+      color: 'teal',
+      gradient: 'from-teal-600 to-teal-400',
+      particleColor: 'bg-teal-400'
     },
     {
       id: 3,
       icon: <MagicWand className="transition-transform duration-500 group-hover:rotate-45" size={32} />,
-      secondaryIcon: <Rocket size={20} className="text-amber-300" />,
+      secondaryIcon: <Rocket size={20} className="text-orange-300" />,
       title: 'Révélation & amplification',
       description: 'Une fois votre projet lancé, nous continuons à l\'optimiser en fonction des données d\'utilisation réelles. Nous mettons en place des stratégies d\'acquisition pour maximiser votre retour sur investissement.',
       features: [
@@ -68,9 +68,9 @@ const Process = () => {
         'Analyse de performances',
         'Optimisation continue',
       ],
-      color: 'amber',
-      gradient: 'from-amber-600 to-amber-400',
-      particleColor: 'bg-amber-400'
+      color: 'orange',
+      gradient: 'from-orange-600 to-orange-400',
+      particleColor: 'bg-orange-400'
     },
   ];
   
@@ -200,13 +200,13 @@ const Process = () => {
       </div>
       
       {/* Magic orbs in background */}
-      <div className="absolute top-1/4 -left-20 w-80 h-80 rounded-full bg-purple-600/5 blur-3xl z-0 animate-pulse-slow"></div>
-      <div className="absolute bottom-1/4 -right-20 w-60 h-60 rounded-full bg-blue-600/5 blur-3xl z-0 animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
-      <div className="absolute top-1/2 right-1/3 w-40 h-40 rounded-full bg-amber-600/5 blur-3xl z-0 animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-1/4 -left-20 w-80 h-80 rounded-full bg-teal-600/5 blur-3xl z-0 animate-pulse-slow"></div>
+      <div className="absolute bottom-1/4 -right-20 w-60 h-60 rounded-full bg-teal-600/5 blur-3xl z-0 animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-1/2 right-1/3 w-40 h-40 rounded-full bg-orange-600/5 blur-3xl z-0 animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
       
       {/* Magic glow that follows mouse */}
       <div 
-        className="absolute rounded-full blur-3xl bg-gradient-to-r from-purple-500/5 to-amber-500/5 pointer-events-none transition-opacity duration-700 opacity-0 hover:opacity-100 z-0"
+        className="absolute rounded-full blur-3xl bg-gradient-to-r from-teal-500/5 to-orange-500/5 pointer-events-none transition-opacity duration-700 opacity-0 hover:opacity-100 z-0"
         style={{
           left: mousePosition.x,
           top: mousePosition.y, 
@@ -222,8 +222,8 @@ const Process = () => {
           <path d="M70 0L140 70L70 140L0 70L70 0Z" fill="url(#process-diamond-gradient)"/>
           <defs>
             <linearGradient id="process-diamond-gradient" x1="0" y1="0" x2="140" y2="140" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#8B5CF6"/>
-              <stop offset="1" stopColor="#FBBF24"/>
+              <stop stopColor="#008080"/>
+              <stop offset="1" stopColor="#FF7F50"/>
             </linearGradient>
           </defs>
         </svg>
@@ -235,7 +235,7 @@ const Process = () => {
           title="Notre formule magique" 
           subtitle={
             <span className="flex items-center justify-center gap-2">
-              Notre processus <Sparkles className="text-amber-400" size={16} />
+              Notre processus <Sparkles className="text-orange-400" size={16} />
             </span>
           }
           className={`transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
@@ -261,7 +261,7 @@ const Process = () => {
             
             {/* Animated progress line */}
             <div 
-              className="absolute top-1/2 left-0 h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-amber-500 -translate-y-1/2 z-10 transition-all duration-1000 ease-out rounded-full overflow-hidden shadow-lg shadow-purple-500/20"
+              className="absolute top-1/2 left-0 h-1 bg-gradient-to-r from-teal-500 via-teal-500 to-orange-500 -translate-y-1/2 z-10 transition-all duration-1000 ease-out rounded-full overflow-hidden shadow-lg shadow-teal-500/20"
               style={{ width: `${(activeStep / (steps.length - 1)) * 100}%` }}
             >
               {/* Effet de scintillement sur la barre de progression */}
@@ -459,7 +459,7 @@ const Process = () => {
               
               {/* Button hover effect */}
               {activeStep > 0 && (
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-transparent group-hover:w-full transition-all duration-500"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-500 to-transparent group-hover:w-full transition-all duration-500"></span>
               )}
             </button>
             
@@ -478,7 +478,7 @@ const Process = () => {
               
               {/* Button hover effect */}
               {activeStep < steps.length - 1 && (
-                <span className="absolute bottom-0 right-0 w-0 h-0.5 bg-gradient-to-l from-amber-500 to-transparent group-hover:w-full transition-all duration-500"></span>
+                <span className="absolute bottom-0 right-0 w-0 h-0.5 bg-gradient-to-l from-orange-500 to-transparent group-hover:w-full transition-all duration-500"></span>
               )}
             </button>
           </div>
@@ -663,8 +663,8 @@ const Process = () => {
         }
         
         /* Magic text */
-        .magic-text-purple {
-          background-image: linear-gradient(90deg, #d8b4fe, #8b5cf6, #d8b4fe);
+        .magic-text-teal {
+          background-image: linear-gradient(90deg, #99f6e4, #008080, #99f6e4);
           background-size: 200% auto;
           background-clip: text;
           -webkit-background-clip: text;
@@ -672,17 +672,8 @@ const Process = () => {
           animation: magic-text 4s linear infinite;
         }
         
-        .magic-text-blue {
-          background-image: linear-gradient(90deg, #bfdbfe, #3b82f6, #bfdbfe);
-          background-size: 200% auto;
-          background-clip: text;
-          -webkit-background-clip: text;
-          color: transparent;
-          animation: magic-text 4s linear infinite;
-        }
-        
-        .magic-text-amber {
-          background-image: linear-gradient(90deg, #fde68a, #f59e0b, #fde68a);
+        .magic-text-orange {
+          background-image: linear-gradient(90deg, #ffcba4, #FF7F50, #ffcba4);
           background-size: 200% auto;
           background-clip: text;
           -webkit-background-clip: text;

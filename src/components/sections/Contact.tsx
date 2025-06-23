@@ -131,13 +131,13 @@ const Contact = () => {
   
   // Services avec icônes et couleurs thématiques
   const services = [
-    { value: 'design', label: 'Design UX/UI', color: 'purple' },
-    { value: 'web', label: 'Développement Web', color: 'blue' },
+    { value: 'design', label: 'Design UX/UI', color: 'teal' },
+    { value: 'web', label: 'Développement Web', color: 'teal' },
     { value: 'mobile', label: 'Développement Mobile', color: 'teal' },
-    { value: 'branding', label: 'Branding Digital', color: 'amber' },
-    { value: 'conversion', label: 'Stratégie de Conversion', color: 'indigo' },
-    { value: 'marketing', label: 'Marketing Digital', color: 'rose' },
-    { value: 'other', label: 'Autre (préciser dans le message)', color: 'emerald' },
+    { value: 'branding', label: 'Branding Digital', color: 'orange' },
+    { value: 'conversion', label: 'Stratégie de Conversion', color: 'orange' },
+    { value: 'marketing', label: 'Marketing Digital', color: 'orange' },
+    { value: 'other', label: 'Autre (préciser dans le message)', color: 'teal' },
   ];
   
   // Générer des particules magiques
@@ -198,17 +198,17 @@ const Contact = () => {
       </div>
       
       {/* Magic borders */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500/20 to-transparent"></div>
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-amber-500/20 to-transparent"></div>
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-teal-500/20 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500/20 to-transparent"></div>
       
       {/* Magic orbs in background */}
-      <div className="absolute top-1/4 -left-20 w-80 h-80 rounded-full bg-purple-600/5 blur-3xl z-0 animate-pulse-slow"></div>
-      <div className="absolute bottom-1/3 -right-20 w-60 h-60 rounded-full bg-amber-600/5 blur-3xl z-0 animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
-      <div className="absolute top-2/3 left-1/3 w-40 h-40 rounded-full bg-blue-600/5 blur-3xl z-0 animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-1/4 -left-20 w-80 h-80 rounded-full bg-teal-600/5 blur-3xl z-0 animate-pulse-slow"></div>
+      <div className="absolute bottom-1/3 -right-20 w-60 h-60 rounded-full bg-orange-600/5 blur-3xl z-0 animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-2/3 left-1/3 w-40 h-40 rounded-full bg-teal-600/5 blur-3xl z-0 animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
       
       {/* Magic glow that follows mouse */}
       <div 
-        className="absolute rounded-full blur-3xl bg-gradient-to-r from-purple-500/5 to-amber-500/5 pointer-events-none transition-opacity duration-700 opacity-0 hover:opacity-100 z-0"
+        className="absolute rounded-full blur-3xl bg-gradient-to-r from-teal-500/5 to-orange-500/5 pointer-events-none transition-opacity duration-700 opacity-0 hover:opacity-100 z-0"
         style={{
           left: mousePosition.x,
           top: mousePosition.y, 
@@ -224,8 +224,8 @@ const Contact = () => {
           <circle cx="40" cy="40" r="39" stroke="url(#contact-circle-gradient)" strokeWidth="2" fill="none"/>
           <defs>
             <linearGradient id="contact-circle-gradient" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#8B5CF6"/>
-              <stop offset="1" stopColor="#F59E0B"/>
+              <stop stopColor="#008080"/>
+              <stop offset="1" stopColor="#FF7F50"/>
             </linearGradient>
           </defs>
         </svg>
@@ -236,8 +236,8 @@ const Contact = () => {
           <polygon points="50,0 100,50 50,100 0,50" stroke="url(#contact-diamond-gradient)" strokeWidth="2" fill="none"/>
           <defs>
             <linearGradient id="contact-diamond-gradient" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#F59E0B"/>
-              <stop offset="1" stopColor="#0EA5E9"/>
+              <stop stopColor="#FF7F50"/>
+              <stop offset="1" stopColor="#008080"/>
             </linearGradient>
           </defs>
         </svg>
@@ -249,7 +249,7 @@ const Contact = () => {
           title="Parlez à un magicien" 
           subtitle={
             <span className="flex items-center justify-center gap-2">
-              Contact <Wand2 className="text-amber-400" size={16} />
+              Contact <Wand2 className="text-orange-400" size={16} />
             </span>
           }
           className={`transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
@@ -261,7 +261,7 @@ const Contact = () => {
             <h3 className="font-playfair text-2xl font-bold text-white mb-6 relative inline-block magic-text">
               Commençons à créer votre magie digitale
               <span className="absolute -top-4 -right-4 transform rotate-12">
-                <Stars size={16} className="text-amber-400 animate-pulse-slow" />
+                <Stars size={16} className="text-orange-400 animate-pulse-slow" />
               </span>
             </h3>
             
@@ -269,7 +269,7 @@ const Contact = () => {
               Que vous ayez un projet spécifique en tête ou que vous cherchiez des conseils
               pour améliorer votre présence en ligne, nous sommes là pour vous aider.
               Contactez-nous aujourd'hui pour transformer votre vision en réalité.
-              <span className="absolute -bottom-2 left-0 w-16 h-0.5 bg-gradient-to-r from-purple-500 to-transparent"></span>
+              <span className="absolute -bottom-2 left-0 w-16 h-0.5 bg-gradient-to-r from-teal-500 to-transparent"></span>
             </p>
             
             <div className="space-y-8 mb-12">
@@ -280,8 +280,8 @@ const Contact = () => {
                 description="Envoyez-nous un message détaillé"
                 action="contact@saharux.com"
                 actionLink="mailto:contact@saharux.com"
-                color="purple"
-                gradient="from-purple-600 to-purple-400"
+                color="teal"
+                gradient="from-teal-600 to-teal-400"
                 delay={0.1}
               />
               
@@ -290,9 +290,9 @@ const Contact = () => {
                 title="Par WhatsApp"
                 description="Discussion instantanée avec un expert"
                 action="Contacter sur WhatsApp"
-                actionLink="#"
-                color="blue"
-                gradient="from-blue-600 to-blue-400"
+                actionLink="https://wa.me/221772488807"
+                color="teal"
+                gradient="from-teal-600 to-teal-400"
                 delay={0.2}
               />
               
@@ -302,8 +302,8 @@ const Contact = () => {
                 description="Réservez un appel de consultation"
                 action="Réserver 30 minutes"
                 actionLink="#"
-                color="amber"
-                gradient="from-amber-600 to-amber-400"
+                color="orange"
+                gradient="from-orange-600 to-orange-400"
                 delay={0.3}
               />
             </div>
@@ -311,7 +311,7 @@ const Contact = () => {
             {/* Floating decorative element */}
             <div className="relative hidden lg:block">
               <div className="absolute -bottom-16 right-10 opacity-30">
-                <Wand2 size={80} className="text-purple-400 transform rotate-45" />
+                <Wand2 size={80} className="text-teal-400 transform rotate-45" />
                 <div className="absolute inset-0 glow-pulse blur-md"></div>
               </div>
             </div>
@@ -320,7 +320,7 @@ const Contact = () => {
           {/* Contact form with magical styling */}
           <div className="relative">
             {/* Magical border effect */}
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 via-amber-500 to-blue-600 rounded-lg blur opacity-20 group-hover:opacity-40 animate-gradient-xy"></div>
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-teal-600 via-orange-500 to-teal-600 rounded-lg blur opacity-20 group-hover:opacity-40 animate-gradient-xy"></div>
             
             <div className="relative bg-gradient-to-br from-midnight-lighter/40 to-midnight-dark/40 backdrop-blur-md border border-white/5 rounded-lg p-8 shadow-xl overflow-hidden">
               {/* Background pattern */}
@@ -333,9 +333,9 @@ const Contact = () => {
               <h3 className="font-playfair text-xl font-semibold text-white mb-8 relative inline-block">
                 <div className="flex items-center gap-2">
                   Envoyez-nous un message
-                  <Sparkles size={16} className="text-amber-400" />
+                  <Sparkles size={16} className="text-orange-400" />
                 </div>
-                <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-purple-500 via-amber-400 to-blue-500 opacity-50 rounded-full"></span>
+                <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-teal-500 via-orange-400 to-teal-500 opacity-50 rounded-full"></span>
               </h3>
               
               {/* Success message */}
@@ -350,7 +350,7 @@ const Contact = () => {
                     <Button 
                       variant="primary" 
                       onClick={() => setFormSubmitted(false)}
-                      className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+                      className="bg-gradient-to-r from-teal-600 to-orange-600 hover:from-teal-700 hover:to-orange-700"
                     >
                       Fermer
                     </Button>
@@ -365,7 +365,7 @@ const Contact = () => {
                     Nom complet
                   </label>
                   <div className="relative">
-                    <div className={`absolute left-3 top-1/2 -translate-y-1/2 text-white/50 ${activeField === 'name' ? `text-purple-400` : ''} transition-colors duration-300`}>
+                    <div className={`absolute left-3 top-1/2 -translate-y-1/2 text-white/50 ${activeField === 'name' ? `text-teal-400` : ''} transition-colors duration-300`}>
                       <User size={18} />
                     </div>
                     <input
@@ -380,8 +380,8 @@ const Contact = () => {
                       className={`
                         w-full bg-midnight-dark border border-white/10 rounded-md py-3 pl-10 pr-4 text-white 
                         transition-all duration-300
-                        ${activeField === 'name' ? 'border-purple-500/50 shadow-sm shadow-purple-500/20' : ''}
-                        focus:outline-none focus:border-purple-500/50 focus:shadow-sm focus:shadow-purple-500/20
+                        ${activeField === 'name' ? 'border-teal-500/50 shadow-sm shadow-teal-500/20' : ''}
+                        focus:outline-none focus:border-teal-500/50 focus:shadow-sm focus:shadow-teal-500/20
                       `}
                       placeholder="Votre nom"
                     />
@@ -389,7 +389,7 @@ const Contact = () => {
                     {/* Magic sparkle effect on focus */}
                     {activeField === 'name' && (
                       <div className="absolute right-3 top-1/2 -translate-y-1/2">
-                        <Sparkles size={14} className="text-purple-400 animate-ping-slow" />
+                        <Sparkles size={14} className="text-teal-400 animate-ping-slow" />
                       </div>
                     )}
                   </div>
@@ -400,7 +400,7 @@ const Contact = () => {
                     Email
                   </label>
                   <div className="relative">
-                    <div className={`absolute left-3 top-1/2 -translate-y-1/2 text-white/50 ${activeField === 'email' ? `text-blue-400` : ''} transition-colors duration-300`}>
+                    <div className={`absolute left-3 top-1/2 -translate-y-1/2 text-white/50 ${activeField === 'email' ? `text-teal-400` : ''} transition-colors duration-300`}>
                       <AtSign size={18} />
                     </div>
                     <input
@@ -415,8 +415,8 @@ const Contact = () => {
                       className={`
                         w-full bg-midnight-dark border border-white/10 rounded-md py-3 pl-10 pr-4 text-white 
                         transition-all duration-300
-                        ${activeField === 'email' ? 'border-blue-500/50 shadow-sm shadow-blue-500/20' : ''}
-                        focus:outline-none focus:border-blue-500/50 focus:shadow-sm focus:shadow-blue-500/20
+                        ${activeField === 'email' ? 'border-teal-500/50 shadow-sm shadow-teal-500/20' : ''}
+                        focus:outline-none focus:border-teal-500/50 focus:shadow-sm focus:shadow-teal-500/20
                       `}
                       placeholder="votre@email.com"
                     />
@@ -424,7 +424,7 @@ const Contact = () => {
                     {/* Magic sparkle effect on focus */}
                     {activeField === 'email' && (
                       <div className="absolute right-3 top-1/2 -translate-y-1/2">
-                        <Sparkles size={14} className="text-blue-400 animate-ping-slow" />
+                        <Sparkles size={14} className="text-teal-400 animate-ping-slow" />
                       </div>
                     )}
                   </div>
@@ -435,7 +435,7 @@ const Contact = () => {
                     Service souhaité
                   </label>
                   <div className="relative">
-                    <div className={`absolute left-3 top-1/2 -translate-y-1/2 text-white/50 ${activeField === 'service' ? `text-amber-400` : ''} transition-colors duration-300`}>
+                    <div className={`absolute left-3 top-1/2 -translate-y-1/2 text-white/50 ${activeField === 'service' ? `text-orange-400` : ''} transition-colors duration-300`}>
                       <FileText size={18} />
                     </div>
                     <select
@@ -449,8 +449,8 @@ const Contact = () => {
                       className={`
                         w-full bg-midnight-dark border border-white/10 rounded-md py-3 pl-10 pr-4 text-white appearance-none
                         transition-all duration-300
-                        ${activeField === 'service' ? 'border-amber-500/50 shadow-sm shadow-amber-500/20' : ''}
-                        focus:outline-none focus:border-amber-500/50 focus:shadow-sm focus:shadow-amber-500/20
+                        ${activeField === 'service' ? 'border-orange-500/50 shadow-sm shadow-orange-500/20' : ''}
+                        focus:outline-none focus:border-orange-500/50 focus:shadow-sm focus:shadow-orange-500/20
                       `}
                     >
                       <option value="" disabled>Sélectionnez un service</option>
@@ -461,7 +461,7 @@ const Contact = () => {
                     
                     {/* Custom select arrow */}
                     <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
-                      <ArrowRight size={14} className={`transform rotate-90 ${activeField === 'service' ? 'text-amber-400' : 'text-white/50'} transition-colors duration-300`} />
+                      <ArrowRight size={14} className={`transform rotate-90 ${activeField === 'service' ? 'text-orange-400' : 'text-white/50'} transition-colors duration-300`} />
                     </div>
                   </div>
                 </div>
@@ -507,7 +507,7 @@ const Contact = () => {
                     type="submit" 
                     fullWidth 
                     size="lg"
-                    className="bg-gradient-to-r from-purple-600 via-blue-500 to-amber-500 hover:from-purple-700 hover:via-blue-600 hover:to-amber-600 shadow-lg shadow-purple-500/20 transition-all duration-300 hover:shadow-purple-500/30 group relative overflow-hidden"
+                    className="!bg-[#008080] hover:!bg-[#006666] !from-[#008080] !to-[#008080]"
                   >
                     <span className="relative z-10 flex items-center justify-center gap-2">
                       Envoyer le message
@@ -515,7 +515,7 @@ const Contact = () => {
                     </span>
                     
                     {/* Animated background effect */}
-                    <div className="absolute inset-0 -z-0 bg-gradient-to-r from-purple-600 via-blue-500 to-amber-500 opacity-0 group-hover:opacity-60 transition-opacity duration-300 shimmer-effect"></div>
+                    <div className="absolute inset-0 -z-0 bg-gradient-to-r from-teal-600 via-teal-500 to-orange-500 opacity-0 group-hover:opacity-60 transition-opacity duration-300 shimmer-effect"></div>
                   </Button>
                 </div>
               </form>
@@ -653,7 +653,7 @@ const Contact = () => {
         
         /* Magic title text */
         .magic-text {
-          background-image: linear-gradient(90deg, #d8b4fe, #93c5fd, #fcd34d);
+          background-image: linear-gradient(90deg, #008080, #99f6e4, #FF7F50);
           background-size: 200% auto;
           background-clip: text;
           -webkit-background-clip: text;

@@ -15,6 +15,7 @@ export default {
       fontFamily: {
         sans: ['DM Sans', 'sans-serif'],
         playfair: ['Playfair Display', 'serif'],
+        lavishly: ['Lavishly Yours', 'cursive'],
       },
       animation: {
         'float': 'float 4s ease-in-out infinite',

@@ -38,11 +38,11 @@ const Footer: React.FC = () => {
           ]} />
 
           <div>
-            <h3 className="text-yellow-400 font-semibold text-xl mb-6">Contact</h3>
+            <h3 className="text-orange-400 font-semibold text-xl mb-6">Contact</h3>
             <ul className="space-y-4">
               <FooterContact icon={<Mail size={18} />} text="contact@saharux.com" />
-              <FooterContact icon={<Phone size={18} />} text="+33 6 12 34 56 78" />
-              <FooterContact icon={<MapPin size={18} />} text={`15 Avenue de l'Innovation\n75008 Paris, France`} />
+              <FooterContact icon={<Phone size={18} />} text="+221 77 248 88 07" />
+              <FooterContact icon={<MapPin size={18} />} text={`Cambérène, Dakar, Sénégal`} />
             </ul>
           </div>
         </div>
@@ -54,8 +54,8 @@ const Footer: React.FC = () => {
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-white/50">
           <p>© {new Date().getFullYear()} Sahar'UX. Tous droits réservés.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-yellow-400 transition-colors">Politique de confidentialité</a>
-            <a href="#" className="hover:text-yellow-400 transition-colors">Mentions légales</a>
+            <a href="#" className="hover:text-teal-400 transition-colors">Politique de confidentialité</a>
+            <a href="#" className="hover:text-orange-400 transition-colors">Mentions légales</a>
           </div>
         </div>
       </div>
@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
 const SocialLink: React.FC<{ icon: React.ReactNode; href: string }> = ({ icon, href }) => (
   <a
     href={href}
-    className="w-10 h-10 rounded-full bg-white/10 hover:bg-yellow-400/20 flex items-center justify-center text-white/80 hover:text-yellow-400 transition-all duration-300 shadow-[0_0_10px_#00000033] hover:shadow-[0_0_20px_#FFD70099]"
+    className="w-10 h-10 rounded-full bg-white/10 hover:bg-teal-400/20 flex items-center justify-center text-white/80 hover:text-teal-400 transition-all duration-300 shadow-[0_0_10px_#00000033] hover:shadow-[0_0_20px_#00808099]"
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -93,11 +93,11 @@ const SocialLink: React.FC<{ icon: React.ReactNode; href: string }> = ({ icon, h
 
 const FooterColumn: React.FC<{ title: string; links: string[] }> = ({ title, links }) => (
   <div>
-    <h3 className="text-yellow-400 font-semibold text-xl mb-6">{title}</h3>
+    <h3 className="text-teal-400 font-semibold text-xl mb-6">{title}</h3>
     <ul className="space-y-3">
       {links.map((item) => (
         <li key={item}>
-          <a href={`#${item.toLowerCase().replace(/\s/g, '-')}`} className="text-white/70 hover:text-yellow-400 transition-colors">
+          <a href={`#${item.toLowerCase().replace(/\s/g, '-')}`} className="text-white/70 hover:text-orange-400 transition-colors">
             {item}
           </a>
         </li>
@@ -108,7 +108,7 @@ const FooterColumn: React.FC<{ title: string; links: string[] }> = ({ title, lin
 
 const FooterContact: React.FC<{ icon: React.ReactNode; text: string }> = ({ icon, text }) => (
   <li className="flex items-start gap-3">
-    <div className="text-yellow-400 mt-1 shrink-0">{icon}</div>
+    <div className="text-orange-400 mt-1 shrink-0">{icon}</div>
     <span className="text-white/70 whitespace-pre-line">{text}</span>
   </li>
 );

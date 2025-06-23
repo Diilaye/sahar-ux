@@ -22,9 +22,9 @@ const Testimonials = () => {
       quote: 'Sahar\'UX a complètement transformé notre présence en ligne. Notre nouveau site a non seulement un look premium qui correspond parfaitement à notre marque, mais a également augmenté nos conversions de 45%. Un investissement qui a largement dépassé nos attentes.',
       image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       rating: 5,
-      color: 'amber',
-      gradient: 'from-amber-600 to-amber-400',
-      icon: <ThumbsUp size={16} className="text-amber-300" />,
+      color: 'teal',
+      gradient: 'from-teal-600 to-teal-400',
+      icon: <ThumbsUp size={16} className="text-teal-300" />,
       stats: '+45% de conversions'
     },
     {
@@ -34,9 +34,9 @@ const Testimonials = () => {
       quote: 'L\'équipe de Sahar\'UX comprend intuitivement ce dont nous avons besoin, parfois avant même que nous le sachions. Ils ont créé une interface utilisateur si intuitive que nos utilisateurs nous félicitent quotidiennement. Notre trafic a augmenté de 75% depuis le lancement.',
       image: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       rating: 5,
-      color: 'blue',
-      gradient: 'from-blue-600 to-blue-400',
-      icon: <Users size={16} className="text-blue-300" />,
+      color: 'teal',
+      gradient: 'from-teal-600 to-teal-400',
+      icon: <Users size={16} className="text-teal-300" />,
       stats: '+75% de trafic'
     },
     {
@@ -46,9 +46,9 @@ const Testimonials = () => {
       quote: 'Le branding créé par Sahar\'UX a donné vie à notre vision d\'une façon que nous n\'aurions jamais pu imaginer. Leur approche créative combinée à une exécution technique impeccable a fait de notre lancement un succès retentissant.',
       image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       rating: 5,
-      color: 'purple',
-      gradient: 'from-purple-600 to-purple-400',
-      icon: <Heart size={16} className="text-purple-300" />,
+      color: 'orange',
+      gradient: 'from-orange-600 to-orange-400',
+      icon: <Heart size={16} className="text-orange-300" />,
       stats: 'Lancement réussi'
     }
   ];
@@ -226,16 +226,16 @@ const Testimonials = () => {
       </div>
       
       {/* Magic borders */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-amber-500/20 to-transparent"></div>
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500/20 to-transparent"></div>
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-teal-500/20 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500/20 to-transparent"></div>
       
       {/* Magic orbs in background */}
-      <div className="absolute top-1/4 -left-20 w-80 h-80 rounded-full bg-amber-600/5 blur-3xl z-0 animate-pulse-slow"></div>
-      <div className="absolute bottom-1/4 -right-20 w-60 h-60 rounded-full bg-purple-600/5 blur-3xl z-0 animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-1/4 -left-20 w-80 h-80 rounded-full bg-teal-600/5 blur-3xl z-0 animate-pulse-slow"></div>
+      <div className="absolute bottom-1/4 -right-20 w-60 h-60 rounded-full bg-orange-600/5 blur-3xl z-0 animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
       
       {/* Magic glow that follows mouse */}
       <div 
-        className="absolute rounded-full blur-3xl bg-gradient-to-r from-amber-500/5 to-purple-500/5 pointer-events-none transition-opacity duration-700 opacity-0 hover:opacity-100 z-0"
+        className="absolute rounded-full blur-3xl bg-gradient-to-r from-teal-500/5 to-orange-500/5 pointer-events-none transition-opacity duration-700 opacity-0 hover:opacity-100 z-0"
         style={{
           left: mousePosition.x,
           top: mousePosition.y, 
@@ -251,8 +251,8 @@ const Testimonials = () => {
           <path d="M30 0L60 30L30 60L0 30L30 0Z" stroke="url(#testimonial-diamond-gradient)" strokeWidth="2" fill="none"/>
           <defs>
             <linearGradient id="testimonial-diamond-gradient" x1="0" y1="0" x2="60" y2="60" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#F59E0B"/>
-              <stop offset="1" stopColor="#8B5CF6"/>
+              <stop stopColor="#008080"/>
+              <stop offset="1" stopColor="#FF7F50"/>
             </linearGradient>
           </defs>
         </svg>
@@ -263,8 +263,8 @@ const Testimonials = () => {
           <circle cx="40" cy="40" r="39" stroke="url(#testimonial-circle-gradient)" strokeWidth="2" fill="none"/>
           <defs>
             <linearGradient id="testimonial-circle-gradient" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#8B5CF6"/>
-              <stop offset="1" stopColor="#3B82F6"/>
+              <stop stopColor="#FF7F50"/>
+              <stop offset="1" stopColor="#008080"/>
             </linearGradient>
           </defs>
         </svg>
@@ -276,7 +276,7 @@ const Testimonials = () => {
           title="Ce que disent nos clients" 
           subtitle={
             <span className="flex items-center justify-center gap-2">
-              Témoignages <Stars className="text-amber-400" size={16} />
+              Témoignages <Stars className="text-orange-400" size={16} />
             </span>
           }
           className={`transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
@@ -410,14 +410,14 @@ const Testimonials = () => {
             <button
               onClick={prevSlide}
               disabled={isAnimating}
-              className="w-12 h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:text-white hover:border-purple-500/30 hover:bg-purple-500/10 transition-all duration-300 group relative disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-12 h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:text-white hover:border-teal-500/30 hover:bg-teal-500/10 transition-all duration-300 group relative disabled:opacity-50 disabled:cursor-not-allowed"
               aria-label="Previous testimonial"
             >
               <ChevronLeft size={20} className="transition-transform duration-300 group-hover:-translate-x-0.5" />
               
               {/* Button glow effect */}
               <div className="absolute inset-0 -z-10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 group-hover:animate-pulse-slow">
-                <div className="absolute inset-0 rounded-full bg-purple-500/10 blur-sm"></div>
+                <div className="absolute inset-0 rounded-full bg-teal-500/10 blur-sm"></div>
               </div>
             </button>
             
@@ -454,14 +454,14 @@ const Testimonials = () => {
             <button
               onClick={nextSlide}
               disabled={isAnimating}
-              className="w-12 h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:text-white hover:border-amber-500/30 hover:bg-amber-500/10 transition-all duration-300 group relative disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-12 h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:text-white hover:border-orange-500/30 hover:bg-orange-500/10 transition-all duration-300 group relative disabled:opacity-50 disabled:cursor-not-allowed"
               aria-label="Next testimonial"
             >
               <ChevronRight size={20} className="transition-transform duration-300 group-hover:translate-x-0.5" />
               
               {/* Button glow effect */}
               <div className="absolute inset-0 -z-10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 group-hover:animate-pulse-slow">
-                <div className="absolute inset-0 rounded-full bg-amber-500/10 blur-sm"></div>
+                <div className="absolute inset-0 rounded-full bg-orange-500/10 blur-sm"></div>
               </div>
             </button>
           </div>
@@ -476,18 +476,18 @@ const Testimonials = () => {
                 <span className="relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-gradient-to-r after:from-transparent after:via-white/20 after:to-transparent">
                   Ils nous font confiance
                 </span>
-                <Wand2 size={14} className="inline-block ml-2 text-amber-400/50 animate-float" />
+                <Wand2 size={14} className="inline-block ml-2 text-orange-400/50 animate-float" />
               </h3>
             </div>
             
             {/* Logo cloud */}
             <div className="flex flex-wrap justify-center gap-10 md:gap-16">
               {[
-                { name: 'LuxeHaven', color: 'amber' },
-                { name: 'FinTech Pro', color: 'blue' },
-                { name: 'EcoSphere', color: 'purple' },
+                { name: 'LuxeHaven', color: 'teal' },
+                { name: 'FinTech Pro', color: 'teal' },
+                { name: 'EcoSphere', color: 'orange' },
                 { name: 'HealthHub', color: 'teal' },
-                { name: 'ArtisanCraft', color: 'rose' }
+                { name: 'ArtisanCraft', color: 'orange' }
               ].map((logo, index) => (
                 <div 
                   key={logo.name} 
